@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: go-kubernetes-bootcamp
+    env: lab
+  name: go-kubernetes-bootcamp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: go-kubernetes-bootcamp
+      env: lab
+  template:
+    metadata:
+      labels:
+        app: go-kubernetes-bootcamp
+        env: lab
+    spec:
+      containers:
+      - image: d5avard/go-kubernetes-bootcamp
+        name: go-kubernetes-bootcamp
+        env:
+        - name: ENV_APP_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: go-kubernetes-bootcamp
+              key: NAME

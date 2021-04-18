@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: go-kubernetes-bootcamp
+  labels:
+    env: lab
+data:
+  NAME: GO Kubernetes Bootcamp
+  CONFIG1: first-config
+  CONFIG2: secong-config
+  
