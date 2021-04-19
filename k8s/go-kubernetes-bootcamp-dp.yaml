@@ -18,7 +18,7 @@ spec:
         env: lab
     spec:
       containers:
-      - image: d5avard/go-kubernetes-bootcamp
+      - image: d5avard/go-kubernetes-bootcamp:1.0
         name: go-kubernetes-bootcamp
         env:
         - name: ENV_APP_NAME

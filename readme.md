@@ -5,11 +5,14 @@ $ touch main.go
 $ touch readme.md
 $ code .
 $ go build -o main .
-$ docker build -t go-kubernetes-bootcamp .
+$ docker build -t d5avard/go-kubernetes-bootcamp .
 $ docker run -d -p 8080:8080 go-kubernetes-bootcamp
 $ docker container ls
 $ docker container logs [docker-id]
 $ docker container stop [docker-id]
+$ docker tag d5avard/go-kubernetes-bootcamp:latest d5avard/go-kubernetes-bootcamp:1.0
+$ docker push d5avard/go-kubernetes-bootcamp:latest
+$ docker push d5avard/go-kubernetes-bootcamp:1.0
 ```
 
 Create config map
@@ -26,9 +29,6 @@ $ kubectl get rs
 $ kubectl get rs/[rs-id]
 $ kubectl describe rs/[rs-id]
 $ kubectl get pods
-```
-
-```main.go
 ```
 
 Références:
